@@ -1,0 +1,117 @@
+/* Reset de estilos */
+body, ul, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos del Menú Lateral */
+.menu-lateral {
+    position: fixed;
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-lateral .logo {
+    margin-bottom: 20px;
+    color: white;
+    font-size: 24px;
+}
+
+.menu-lateral ul {
+    list-style: none;
+    width: 100%;
+}
+
+.menu-lateral li {
+    margin-bottom: 10px;
+}
+
+.menu-lateral a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.menu-lateral a:hover {
+    background-color: #ff9800;
+}
+
+/* Media Query: Ajuste del Menú para Móviles */
+@media (max-width: 768px) {
+    .menu-lateral {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Sección de Inicio */
+.inicio {
+    margin-left: 250px;
+    padding: 50px;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Media Query: Ajuste de Inicio para Móviles */
+@media (max-width: 768px) {
+    .inicio {
+        margin-left: 0;
+    }
+}
+
+/* Galería */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    margin-left: 250px;
+}
+
+.galeria img {
+    width: 100%;
+    transition: transform 0.5s, filter 0.5s;
+    filter: grayscale(100%);
+}
+
+.galeria img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* Media Query: Ajuste de Galería para Móviles */
+@media (max-width: 768px) {
+    .galeria {
+        margin-left: 0;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.footer .redes a {
+    color: white;
+    margin-right: 15px;
+    font-size: 24px;
+    transition: transform 0.3s;
+}
+
+.footer .redes a:hover {
+    transform: translateY(-5px);
+}
